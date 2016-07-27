@@ -1,6 +1,7 @@
 package com.reflection.person.impl;
 
 import com.reflection.global.GenericDAO;
+import com.reflection.global.GenericDAOImpl;
 import com.reflection.model.Person;
 import com.reflection.person.PersonDAO;
 import org.hibernate.Criteria;
@@ -15,7 +16,7 @@ import java.util.List;
  * Created by mesut on 27.07.2016.
  */
 @Repository
-public class PersonDAOImpl extends GenericDAO<Person> implements PersonDAO {
+public class PersonDAOImpl extends GenericDAOImpl<Person> implements PersonDAO {
 
     @Autowired
     private SessionFactory sessionFactory;

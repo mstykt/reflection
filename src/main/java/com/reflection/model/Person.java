@@ -37,6 +37,19 @@ public class Person extends BaseModel implements Serializable {
     public Person() {
     }
 
+    public Person(Long id) {
+        this.id = id;
+    }
+
+    public Person(Long id, String name, String surname, int age, String address, String city) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.address = address;
+        this.city = city;
+    }
+
     public Long getId() {
         return id;
     }
