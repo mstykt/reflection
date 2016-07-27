@@ -1,16 +1,16 @@
 package com.reflection.operations;
 
-import com.reflection.global.GenericDAO;
 import com.reflection.global.GenericDAOImpl;
 import com.reflection.global.GenericService;
-import com.reflection.model.BaseModel;
 import com.reflection.model.Person;
 import com.reflection.person.impl.PersonController;
-import com.reflection.person.impl.PersonDAOImpl;
 import com.reflection.person.impl.PersonServiceImpl;
 
 import java.lang.annotation.Annotation;
-import java.lang.reflect.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 /**
  * Created by mesut on 27.07.2016.
