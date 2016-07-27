@@ -4,13 +4,11 @@ import com.reflection.global.GenericDAOImpl;
 import com.reflection.global.GenericService;
 import com.reflection.model.Person;
 import com.reflection.person.impl.PersonController;
+import com.reflection.person.impl.PersonDAOImpl;
 import com.reflection.person.impl.PersonServiceImpl;
 
 import java.lang.annotation.Annotation;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 
 /**
  * Created by mesut on 27.07.2016.
@@ -101,6 +99,9 @@ public class ReflectionClasses {
         for (Annotation annotation : annotations) {
             System.out.println(annotation.toString());
         }
+
+
+        System.out.println("Type name: " + ((ParameterizedType)PersonDAOImpl.class.getGenericSuperclass()).getActualTypeArguments()[0].toString());
 
     }
 }
